@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Storm Lomax Author</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Storm Lomax</h1>
+  <p>Fantasy Romance Author</p>
+</div>
+
+<div class="navbar">
+  <a href="#" class="active">Home</a>
+  <a href="#">Publications</a>
+  <a href="#">Wrath of the Never Queen</a>
+  <a href="#">Publications</a>
+  <a href="#" class="right">Contact</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>I drink coffee and I write things.
+        <br>
+        I specialise in romance, fantasy, and horror (not always at the same time).
+        Here, you can find micro stories, flash fiction, book reviews and writer guides.</p>
+    <h3>More Text</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div>
+  </div>
+  <div class="main">
+    <h2>Wrath of the Never Queen</h2>
+    <h5>Adult Fantasy Romance</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p><b>A doomed prince with a monstrous curse.
+        A sadistic king with a dark history.
+        And the witch who will be his reckoning.</b></p>
+    <p>Shivani, a talented witch, has so far avoided the annual Summoning.
+        In her village, women are sent to the King each year and given six months to win the Prince’s heart and break his beastly curse.
+        Anyone who can do so will be named Queen.
+        <br><p>
+        No one has succeeded.
+        <br><p>
+        Deep in debt and with the promise of a handsome reward, Shivani’s father volunteers her for the Summoning.
+        Shivani is drugged to dull her witchcraft and taken to the castle against her will.
+        <br><p>
+        With no magic and no allies, Shivani attempts a desperate escape through her only window.
+        When she falls, Prince Theo sees her in time to catch her.
+        An unlikely friendship forms as Shivani and Theo realise they are as trapped as each other –
+        Theo cursed to uncontrollably transform into a beast and Shivani with a six-month countdown to an execution.
+        <br><p>
+        When Shivani finds a long-forgotten tunnel deep in the castle,
+        she could leave the horrors of the Summoning and the cruel King behind.
+        But it wouldn’t save the Prince and it wouldn’t free the imprisoned servants.
+        Or Shivani could stay – if she’s shrewd enough to decipher the curse before
+        the executioner’s axe drops.
+        <br><p>
+        <i>Wrath of the Never Queen</i> is perfect for readers who crave a Fantasy Romance
+        with low spice, feminine rage, and a main character who lets nothing stand in her way.
+        </p>
+    <br>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>
