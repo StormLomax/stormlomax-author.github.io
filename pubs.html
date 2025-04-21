@@ -12,19 +12,23 @@
 * {
   box-sizing: border-box;
 }
+
 a:link, a:visited {
   background-color: #4b0062;
   color: white;
   padding: 14px 25px;
+  border-radius: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   align-items: center;
 }
+
 a:hover, a:active {
   background-color: #fed9df;
   color: #4b0062;
 }
+
 body {
   font-family: Georgia, serif;
   margin: 0;
@@ -44,7 +48,7 @@ body {
 }
 .navbar {
   overflow: hidden;
-  background-color: #fed9df;
+  background-color: #4b0062;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -94,35 +98,47 @@ body {
   padding: 20px;
 }
 .footer {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 20px;
-  background: #f2c8c9;
-  gap: 20px;
+    display: flex;
+    justify-content: center; /* Space between left and right sections */
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    padding: 20px;
+    background: #f2c8c9;
+    gap: 10px;
+    border-top: #4b0062 solid 2px; /* Add a top border */
+    width: 100%; /* Ensure the footer spans the full width */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
+
+/* Footer left and right sections */
 .footer-left {
-  flex: 1;
-  min-width: 200px;
+    flex: 1;
+    min-width: 200px;
+    text-align: center
 }
+
 .footer-right {
-  flex: 1;
-  min-width: 200px;
-  text-align: right;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
 }
+
 .footer a {
-  display: block;
-  margin-bottom: 5px;
-  text-decoration: none;
-  color: #f2c8c9;
-  transition: color 0.3s;
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #f2c8c9;
+    transition: color 0.3s;
 }
+
 .footer a:hover {
-  color: #4b0062;
+    color: #4b0062;
 }
+
 .footer p {
-  margin: 0 0 10px;
+    margin: 0 0 10px;
 }
+
 @media screen and (max-width: 700px) {
   .row {
     flex-direction: column;
@@ -178,13 +194,13 @@ body {
   <a href="house.html">House of the Iron Reaper</a>
   <a href="pubs.html">Flash Fiction</a>
   <a href="events.html">Author Events</a>
-  <a href="newsletter.html">Newsletter</a>
+  <a href="https://stormlomax.substack.com/subscribe">Newsletter</a>
   <a href="socials.html">Social Media</a>
-  <a href="contact.html">Contact</a>
+  <a href="credits.html">Credits</a>
 </div>
 <div class="row">
   <div class="side">
-    <img src="author_photo.jpg" alt="author-photo" style="width:100%; height:auto;">
+    <img src="self.png" alt="author-photo" style="width:100%; height:auto;">
     <p>Hi! I'm Storm Lomax. I drink coffee and I write things.</p>
     <p>I specialise in romance, fantasy, and horror (not always at the same time but it's weird how often they overlap). Here, you can find info about my books, my previously published flash fiction, and any upcoming events.</p>
     <p>Thanks for visiting!</p>
