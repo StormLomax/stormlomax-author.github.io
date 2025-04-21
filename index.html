@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/b66cbbd922.js" crossorigin="anonymous"></script>
 <style>
 * {
   box-sizing: border-box;
@@ -139,6 +140,31 @@ body {
     width: 100%;
   }
 }
+.social-media-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: center;
+}
+
+.social-media-grid a {
+    text-decoration: none;
+    color: #4b0062;
+    background-color: #fed9df;
+    padding: 10px;
+    border:#4b0062 solid 2px;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-media-grid a:hover {
+    background-color: #4b0062;
+    color: #fed9df;
+}
+
 </style>
 </head>
 <body>
@@ -166,7 +192,18 @@ body {
     <p>Lorem ipsum dolor sit ame.</p>
     <img src="sign_up.png" alt="newsletter" style="width:100%; height:auto;"><br>
     <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="social-media-grid">
+        <a href="https://www.instagram.com/stormlomax.author/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <br>
+        <a href="https://www.tiktok.com/@stormlomax" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        <br>
+        <a href="https://www.facebook.com/storm.lomax.author" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <br>
+        <a href="https://stormlomax.substack.com/" target="_blank"><i class="fa-solid fa-envelope-open-text"></i></a>
+        <br>
+        <a href="https://www.goodreads.com/author/show/17287322.Storm_Lomax" target="_blank"><i class="fa-brands fa-goodreads"></i></a>
+    </div>
   </div>
   <div class="main">
     <img src="cover_image.png" alt="cover" style="width:100%; height:auto;">
