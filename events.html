@@ -8,271 +8,58 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/b66cbbd922.js" crossorigin="anonymous"></script>
-<style>
-* {
-  box-sizing: border-box;
-}
-/* Link button */
-a:link, a:visited {
-  background-color: #4b0062;
-  color: white;
-  padding: 14px 25px;
-  border-radius: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  align-items: center;
-}
-
-a:hover, a:active {
-  background-color: #fed9df;
-  color: #4b0062;
-}
-
-/* Style the body */
-body {
-  font-family: Georgia, serif;
-  margin: 0;
-  color: #4b0062;
-}
-
-/* Header/logo Title */
-.header {
-  text-align: center;
-  color: white;
-  background-color: #fed9df;
-}
-
-.h2 {
-    font-family: "Italianno", cursive, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 70px;
-  text-align: center;
-}
-
-/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
-.navbar {
-  overflow: hidden;
-  background-color: #4b0062;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  border: #fed9df solid 2px;
-}
-
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: #fed9df;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #fed9df;
-  color: #4b0062;
-}
-
-/* Active/current link */
-.navbar a.active {
-  background-color: #4b0062;
-  color: #fed9df;
-}
-
-/* Column container */
-.row {  
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #4b0062;
-  color: #fed9df;
-  padding: 20px;
-}
-
-/* Main column */
-.main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: #f2c8c9;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
-    display: flex;
-    justify-content: center; /* Space between left and right sections */
-    align-items: center; /* Align items vertically */
-    flex-wrap: wrap; /* Allow wrapping for responsiveness */
-    padding: 20px;
-    background: #f2c8c9;
-    gap: 10px;
-    border-top: #4b0062 solid 2px; /* Add a top border */
-    width: 100%; /* Ensure the footer spans the full width */
-    box-sizing: border-box; /* Include padding in width calculation */
-}
-
-.footer-left {
-    flex: 1;
-    min-width: 200px;
-    text-align: center
-}
-
-.footer-right {
-    flex: 1;
-    min-width: 200px;
-    text-align: center;
-}
-
-.footer a {
-    display: block;
-    margin-bottom: 5px;
-    text-decoration: none;
-    color: #f2c8c9;
-    transition: color 0.3s;
-}
-
-.footer a:hover {
-    color: #4b0062;
-}
-
-.footer p {
-    margin: 0 0 10px;
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 700px) {
-    .social-media-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-    .links a {
-        display: block;
-        margin-bottom: 10px;
-    }
-}
-
-.social-media-grid {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    float: center;
-}
-
-.social-media-grid a {
-    text-decoration: none;
-    color: #4b0062;
-    background-color: #fed9df;
-    padding: 10px;
-    border:#4b0062 solid 2px;
-    border-radius: 30px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.social-media-grid a:hover {
-    background-color: #4b0062;
-    color: #fed9df;
-}
-
-.events {
-    border-radius: 10px;
-    border: #4b0062 solid 2px;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-</style>
+<link rel="stylesheet" href="main.css">
 </head>
 <body>
 
 <div class="header">
-    <img src="hero_image.png" alt="hero" style="width:100%; height:auto;">
+    <img src="images/hero_image.png" alt="hero" style="width:100%; height:auto;">
 </div>
-
+    
 <div class="navbar">
-  <a href="index.html" class="active">Home</a>
-  <a href="about.html">About Me</a>
-  <a href="wrath.html">Wrath of the Never Queen</a>
-  <a href="house.html">House of the Iron Reaper</a>
-  <a href="pubs.html">Flash Fiction</a>
-  <a href="events.html">Author Events</a>
-  <a href="https://stormlomax.substack.com/subscribe">Newsletter</a>
-  <a href="socials.html">Social Media</a>
-  <a href="credits.html">Credits</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="wrath.html">Wrath of the Never Queen</a>
+    <a href="house.html">House of the Iron Reaper</a>
+    <a href="pubs.html">Flash Fiction</a>
+    <a href="events.html">Author Events</a>
+    <a href="https://stormlomax.substack.com/subscribe">Newsletter</a>
+    <a href="socials.html">Social Media</a>
+    <a href="credits.html">Credits</a>
+</div>
+    
+<div class="row">
+    <div class="side">
+        <img src="images/self.png" alt="author-photo" style="width:100%; height:auto;">
+        <p>Hi! I'm Storm Lomax. I drink coffee and I write things.</p> 
+        <p>I specialise in romance, fantasy, and horror (not always at the same time but it's weird how often
+            they overlap).</p>
+        <p>Here, you can find info about my books, my previously published flash fiction,
+            and any upcoming events.</p>
+        <p>Thanks for visiting!</p>
+      
+        <a href="https://stormlomax.substack.com/subscribe"><img src="images/sign_up.png" alt="newsletter" style="width:100%; height:auto;"></a><br>
+        <a href="events.html"><img src="images/author_events.png" alt="author-events" style="width:100%; height:auto;"></a><br>
+      
+        <div class="social-media-grid">
+            <a href="https://www.instagram.com/stormlomax.author/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@stormlomax" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/storm.lomax.author" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://stormlomax.substack.com/" target="_blank"><i class="fa-solid fa-envelope-open-text"></i></a>
+            <a href="https://www.goodreads.com/author/show/17287322.Storm_Lomax" target="_blank"><i class="fa-brands fa-goodreads"></i></a>
+        </div>
 </div>
 
-<div class="row">
-  <div class="side">
-    <img src="self.png" alt="author-photo" style="width:100%; height:auto;">
-    <p>Hi! I'm Storm Lomax. I drink coffee and I write things.
-    <p> 
-        I specialise in romance, fantasy, and horror (not always at the same time but it's weird how often
-        they overlap).
-        Here, you can find info about my books, my previously published flash fiction,
-        and any upcoming events.
-    <p>
-        Thanks for visiting!
-    </p>
-    <a href="https://stormlomax.substack.com/subscribe"><img src="sign_up.png" alt="newsletter" style="width:100%; height:auto;"></a><br>
-    <a href="author-events.html"><img src="author_events.png" alt="author-events" style="width:100%; height:auto;"></a><br>
-    <div class="social-media-grid">
-        <a href="https://www.instagram.com/stormlomax.author/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@stormlomax" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="https://www.facebook.com/storm.lomax.author" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://stormlomax.substack.com/" target="_blank"><i class="fa-solid fa-envelope-open-text"></i></a>
-        <a href="https://www.goodreads.com/author/show/17287322.Storm_Lomax" target="_blank"><i class="fa-brands fa-goodreads"></i></a>
-    </div>
-  </div>
-  <div class="main">
+<div class="main">
     <h1>Upcoming Events</h1>
     <div class="events">
         <h2>London Book Bonanza</h2></p>
-    <p><i>Saturday 17th May 2025</p>
-    <p>Waterstones Piccadilly</p>
-    <p>12pm – 4pm</i></p>
-    <p>Taking place in Europe’s biggest bookstore (really!), the London Book Bonanza
-        will be brimming with authors and bookish merch creators.
-    <p>Signed copies of Wrath of the Never Queen available!</p>
+        <p><i>Saturday 17th May 2025</p>
+        <p>Waterstones Piccadilly</p>
+        <p>12pm – 4pm</i></p>
+        <p>Taking place in Europe’s biggest bookstore (really!), the London Book Bonanza
+            will be brimming with authors and bookish merch creators.
+        <p>Signed copies of Wrath of the Never Queen available!</p>
         <a href="https://www.eventbrite.com/e/london-book-bonanza-tickets-1296673839359" target="_blank">Buy Tickets</a></p>
     </div>
     <div class="events">
@@ -298,26 +85,25 @@ body {
             you can get tickets via their website below.</p>
         <p><a href="https://www.cymerafestival.co.uk/weekend-pass" target="_blank">Get Tickets</a></p>
         </div>
-    
 </div>
 
 <div class="footer">
     <div class="footer-left">
-        <p>Copyright © Storm Lomax 2025</p>
-        <p>Website designed by Storm Lomax</p>
-        <a href="#">Author Events</a>
-        <a href="#">Newsletter</a>
-        <a href="#">Social Media</a>
-        <a href="#">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="events.html">Author Events</a>
+      <a href="wrath.html">Wrath of the Never Queen</a>
+      <a href="house.html">House of the Iron Reaper</a>
     </div>
     <div class="footer-right">
-        <a href="#">Home</a>
-        <a href="#">About Me</a>
-        <a href="#">Wrath of the Never Queen</a>
-        <a href="#">House of the Iron Reaper</a>
-        <a href="#">Flash Fiction</a>
+      <a href="pubs.html">Flash Fiction</a>
+      <a href="https://stormlomax.substack.com/subscribe">Newsletter</a>
+      <a href="socials.html">Social Media</a>
+      <a href="credits.html">Credits</a>
+      <p>Copyright © Storm Lomax 2025</p>
+      <p>Website designed by Storm Lomax</p>
     </div>
-</div>
+  </div>
 
 </body>
 </html>

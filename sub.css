@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+  }
+  /* Link button */
+  a:link, a:visited {
+    background-color: #4b0062;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    align-items: center;
+  }
+  
+  a:hover, a:active {
+    background-color: #fed9df;
+    color: #4b0062;
+  }
+  
+  /* Body Style */
+  body {
+    font-family: Georgia, serif;
+    margin: 0;
+    color: #4b0062;
+  }
+  
+  /* Header Style */
+  .header {
+    text-align: center;
+    color: white;
+    background-color: #fed9df;
+  }
+  
+  /* H2 Style */
+  .h2 {
+    font-family: "Italianno", cursive, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+    text-align: center;
+  }
+  
+  /* Navigation Bar Style */
+  .navbar {
+    overflow: hidden;
+    background-color: #4b0062;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    border: #fed9df solid 2px;
+  }
+  
+  /* Navigation Bar Links Style */
+  .navbar a {
+    float: left;
+    display: block;
+    color: #fed9df;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  /* Navigation Bar Links Hover Style */
+  .navbar a:hover {
+    background-color: #fed9df;
+    color: #4b0062;
+  }
+  
+  /* Column Container */
+  .row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+  }
+  
+  /* Sidebar/left Column Style */
+  .side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #4b0062;
+    color: #fed9df;
+    padding: 20px;
+  }
+  
+  /* Main column Style */
+.main {
+    display: flex; /* Use flexbox for layout */
+    gap: 20px; /* Add space between the columns */
+    background-color: #f2c8c9;
+    padding: 20px;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.main > div {
+    flex: 1; /* Make both columns take equal space */
+    min-width: 300px; /* Ensure columns don't shrink too much */
+}
+
+@media screen and (max-width: 700px) {
+    .main {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+    }
+}
+  
+  /* Footer Style */
+  .footer {
+    display: flex;
+    justify-content: center; /* Space between left and right sections */
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    padding: 20px;
+    background: #f2c8c9;
+    gap: 10px;
+    border-top: #4b0062 solid 2px; /* Add a top border */
+    width: 100%; /* Ensure the footer spans the full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  
+  .footer-left, .footer-right {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+  }
+  .footer a {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #f2c8c9;
+    transition: color 0.3s;
+  }
+  .footer a:hover {
+    color: #4b0062;
+  }
+  .footer p {
+    margin: 0 0 10px;
+  }
+  
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .row {   
+      flex-direction: column;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+      .social-media-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      }
+      .links a {
+        display: block;
+        margin-bottom: 10px;
+      }
+      .row {
+        flex-direction: column;
+      }
+      .side, .main {
+        flex: 100%;
+      }
+      }
+  
+  /* Social Media Grid */
+  .social-media-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: center;
+  }
+  
+  .social-media-grid a {
+    text-decoration: none;
+    color: #4b0062;
+    background-color: #fed9df;
+    padding: 10px;
+    border:#4b0062 solid 2px;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .social-media-grid a:hover {
+    background-color: #4b0062;
+    color: #fed9df;
+  }

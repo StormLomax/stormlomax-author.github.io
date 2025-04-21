@@ -8,218 +8,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/b66cbbd922.js" crossorigin="anonymous"></script>
-<style>
-* {
-  box-sizing: border-box;
-}
-/* Link button */
-a:link, a:visited {
-  background-color: #4b0062;
-  color: white;
-  padding: 14px 25px;
-  border-radius: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  align-items: center;
-}
-
-a:hover, a:active {
-  background-color: #fed9df;
-  color: #4b0062;
-}
-
-/* Style the body */
-body {
-  font-family: Georgia, serif;
-  margin: 0;
-  color: #4b0062;
-}
-
-/* Header/logo Title */
-.header {
-  text-align: center;
-  color: white;
-  background-color: #fed9df;
-}
-
-.h2 {
-    font-family: "Italianno", cursive, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 70px;
-  text-align: center;
-}
-
-/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
-.navbar {
-  overflow: hidden;
-  background-color: #4b0062;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  border: #fed9df solid 2px;
-}
-
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: #fed9df;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #fed9df;
-  color: #4b0062;
-}
-
-/* Active/current link */
-.navbar a.active {
-  background-color: #4b0062;
-  color: #fed9df;
-}
-
-/* Column container */
-.row {  
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #4b0062;
-  color: #fed9df;
-  padding: 20px;
-}
-
-/* Main column */
-.main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: #f2c8c9;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
-    display: flex;
-    justify-content: center; /* Space between left and right sections */
-    align-items: center; /* Align items vertically */
-    flex-wrap: wrap; /* Allow wrapping for responsiveness */
-    padding: 20px;
-    background: #f2c8c9;
-    gap: 10px;
-    border-top: #4b0062 solid 2px; /* Add a top border */
-    width: 100%; /* Ensure the footer spans the full width */
-    box-sizing: border-box; /* Include padding in width calculation */
-}
-
-.footer-left {
-    flex: 1;
-    min-width: 200px;
-    text-align: center
-}
-
-.footer-right {
-    flex: 1;
-    min-width: 200px;
-    text-align: center;
-}
-
-.footer a {
-    display: block;
-    margin-bottom: 5px;
-    text-decoration: none;
-    color: #f2c8c9;
-    transition: color 0.3s;
-}
-
-.footer a:hover {
-    color: #4b0062;
-}
-
-.footer p {
-    margin: 0 0 10px;
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 700px) {
-    .social-media-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-    .links a {
-        display: block;
-        margin-bottom: 10px;
-    }
-}
-
-.social-media-grid {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    float: center;
-}
-
-.social-media-grid a {
-    text-decoration: none;
-    color: #4b0062;
-    background-color: #fed9df;
-    padding: 10px;
-    border:#4b0062 solid 2px;
-    border-radius: 30px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.social-media-grid a:hover {
-    background-color: #4b0062;
-    color: #fed9df;
-}
-
-</style>
+<link rel="stylesheet" href="main.css">
 </head>
 <body>
 
 <div class="header">
-    <img src="hero_image.png" alt="hero" style="width:100%; height:auto;">
+  <img src="images/hero_image.png" alt="hero" style="width:100%; height:auto;">
 </div>
 
 <div class="navbar">
@@ -236,18 +30,16 @@ body {
 
 <div class="row">
   <div class="side">
-    <img src="self.png" alt="author-photo" style="width:100%; height:auto;">
-    <p>Hi! I'm Storm Lomax. I drink coffee and I write things.
-    <p> 
-        I specialise in romance, fantasy, and horror (not always at the same time but it's weird how often
-        they overlap).
-        Here, you can find info about my books, my previously published flash fiction,
-        and any upcoming events.
-    <p>
-        Thanks for visiting!
-    </p>
-    <a href="https://stormlomax.substack.com/subscribe"><img src="sign_up.png" alt="newsletter" style="width:100%; height:auto;"></a><br>
-    <a href="author-events.html"><img src="author_events.png" alt="author-events" style="width:100%; height:auto;"></a><br>
+    <img src="images/self.png" alt="author-photo" style="width:100%; height:auto;">
+    <p>Hi! I'm Storm Lomax. I drink coffee and I write things.</p>
+    <p>I specialise in romance, fantasy, and horror (not always at the same time but it's weird how often
+        they overlap).</p>
+    <p>Here, you can find info about my books, my previously published flash fiction,
+        and any upcoming events.</p>
+    <p>Thanks for visiting!</p>
+
+    <a href="https://stormlomax.substack.com/subscribe"><img src="images/sign_up.png" alt="newsletter" style="width:100%; height:auto;"></a><br>
+    <a href="events.html"><img src="images/author_events.png" alt="author-events" style="width:100%; height:auto;"></a><br>
     <div class="social-media-grid">
         <a href="https://www.instagram.com/stormlomax.author/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@stormlomax" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
@@ -256,45 +48,44 @@ body {
         <a href="https://www.goodreads.com/author/show/17287322.Storm_Lomax" target="_blank"><i class="fa-brands fa-goodreads"></i></a>
     </div>
   </div>
+
   <div class="main">
-    <img src="cover_image.png" alt="cover" style="width:100%; height:auto;">
-    <p><b>A doomed prince with a monstrous curse.
+    <img src="images/cover_image.png" alt="cover" style="width:100%; height:auto;">
+    <h2>A doomed prince with a monstrous curse.
         A sadistic king with a dark history.
-        And the witch who will be his reckoning.</b></p>
+        And the witch who will be his reckoning.</h2>
     <p>Shivani, a talented witch, has so far avoided the annual Summoning.
-        In her village, women are sent to the King each year and given six months to win the Prince’s heart and break his beastly curse.
-        Anyone who can do so will be named Queen.
-        <br><p>
-        No one has succeeded.
-        <br><p>
-        Deep in debt and with the promise of a handsome reward, Shivani’s father volunteers her for the Summoning.
-        Shivani is drugged to dull her witchcraft and taken to the castle against her will.
-        <br><p>
-        With no magic and no allies, Shivani attempts a desperate escape through her only window.
+        In her village, women are sent to the King each year and given six
+        months to win the Prince’s heart and break his beastly curse.
+        Anyone who can do so will be named Queen.</p>
+    <p>No one has succeeded.</p>
+    <p>Deep in debt and with the promise of a handsome reward, Shivani’s father volunteers her for the Summoning.
+        Shivani is drugged to dull her witchcraft and taken to the castle against her will.</p>
+    <p>With no magic and no allies, Shivani attempts a desperate escape through her only window.
         When she falls, Prince Theo sees her in time to catch her.
         An unlikely friendship forms as Shivani and Theo realise they are as trapped as each other –
-        Theo cursed to uncontrollably transform into a beast and Shivani with a six-month countdown to an execution.
-        <br><p>
-        When Shivani finds a long-forgotten tunnel deep in the castle,
+        Theo cursed to uncontrollably transform into a beast and Shivani with a six-month countdown
+        to an execution.</p>
+    <p>When Shivani finds a long-forgotten tunnel deep in the castle,
         she could leave the horrors of the Summoning and the cruel King behind.
         But it wouldn’t save the Prince and it wouldn’t free the imprisoned servants.
         Or Shivani could stay – if she’s shrewd enough to decipher the curse before
-        the executioner’s axe drops.
-        <br><p>
-        <i>Wrath of the Never Queen</i> is perfect for readers who crave a Fantasy Romance
-        with low spice, feminine rage, and a main character who lets nothing stand in her way.
-        </p>
-    <br>
-    <img src="ratings1.png" alt="ratings" style="width:100%; height:auto;">
-    <br>
+        the executioner’s axe drops.</p>
+    <p><i>Wrath of the Never Queen</i> is perfect for readers who crave a Fantasy Romance
+        with low spice, feminine rage, and a main character who lets nothing stand in her way.</p>
+
     <div class="links" style="float: center; text-align: center;">
-    <a href="default.asp" target="_blank">GoodReads</a>
-    <a href="default.asp" target="_blank">Amazon UK</a>
-    <a href="default.asp" target="_blank">Amazon US</a>
-    <a href="default.asp" target="_blank">StoryGraph</a>
+    <a href="https://www.goodreads.com/book/show/219179695-wrath-of-the-never-queen?ref=nav_sb_ss_1_24" target="_blank">GoodReads</a>
+    <a href="https://www.amazon.co.uk/dp/B0DH2QQDDB" target="_blank">Amazon UK</a>
+    <a href="https://www.amazon.com/dp/B0DH2QQDDB" target="_blank">Amazon US</a>
+    <a href="https://app.thestorygraph.com/books/8f072932-fa60-45ad-b72f-e15f9b75a7fa" target="_blank">StoryGraph</a>
     </div>
-    <p>
-    <img src="coming_soon.png" alt="coming-soon" style="width:100%; height:auto;">
+
+   <hr>
+
+    <img src="images/coming_soon.png" alt="coming-soon" style="width:100%; height:auto;">
+    <h2>Dragons, combat, and fierce love combine in this sapphic retelling of Cinderella, set in the same
+      magical world as <i>Wrath of the Never Queen</i>.</h2>
     <p>Deyanara is one of the last surviving dragons of House Iron, her lineage hanging by a thread after a tragic
         accident claimed her father and friends. With her House on the brink of ruin, she’s determined to work day and
         night to ensure its survival.</p>
@@ -302,32 +93,33 @@ body {
         for the chance to ascend to unique power—Deyanara is drawn into a dangerous game.</p>
     <p>But as the Rites grow more perilous and it becomes clear someone is pulling the strings behind the scenes,
         Deyanara must decide how far she will go to protect the ones she loves.</p>
-    <p>House of the Iron Reaper is perfect for readers who crave a sapphic fantasy romance with rivals to lovers,
+    <p><i>House of the Iron Reaper</i> is perfect for readers who crave a sapphic fantasy romance with rivals to lovers,
         dragon magic, and a love that breaks the bounds of life and death.</p>
     <p>Coming 1st September 2025.</p>
+
     <div class="links" style="float: center; text-align: center;">
-        <a href="default.asp" target="_blank">Pre-Order UK</a>
-        <a href="default.asp" target="_blank">Pre-Order US</a>
-        </div>
+      <a href="https://www.amazon.co.uk/House-Iron-Reaper-Magic-Malice-ebook/dp/B0DPXL9X9W/" target="_blank">Pre-Order UK</a>
+      <a href="https://www.amazon.com/House-Iron-Reaper-Magic-Malice-ebook/dp/B0DPXL9X9W" target="_blank">Pre-Order US</a>
+    </div>
   </div>
 </div>
 
 <div class="footer">
-    <div class="footer-left">
-        <p>Copyright © Storm Lomax 2025</p>
-        <p>Website designed by Storm Lomax</p>
-        <a href="#">Author Events</a>
-        <a href="#">Newsletter</a>
-        <a href="#">Social Media</a>
-        <a href="#">Contact</a>
-    </div>
-    <div class="footer-right">
-        <a href="#">Home</a>
-        <a href="#">About Me</a>
-        <a href="#">Wrath of the Never Queen</a>
-        <a href="#">House of the Iron Reaper</a>
-        <a href="#">Flash Fiction</a>
-    </div>
+  <div class="footer-left">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="events.html">Author Events</a>
+    <a href="wrath.html">Wrath of the Never Queen</a>
+    <a href="house.html">House of the Iron Reaper</a>
+  </div>
+  <div class="footer-right">
+    <a href="pubs.html">Flash Fiction</a>
+    <a href="https://stormlomax.substack.com/subscribe">Newsletter</a>
+    <a href="socials.html">Social Media</a>
+    <a href="credits.html">Credits</a>
+    <p>Copyright © Storm Lomax 2025</p>
+    <p>Website designed by Storm Lomax</p>
+  </div>
 </div>
 
 </body>
