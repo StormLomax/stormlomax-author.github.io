@@ -43,7 +43,7 @@ body {
 }
 
 .h2 {
-  font-family: "Italianno", cursive;
+    font-family: "Italianno", cursive, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 70px;
@@ -123,9 +123,39 @@ body {
 
 /* Footer */
 .footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #f2c8c9;
+    gap: 20px;
+}
+
+.footer-left {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-right {
+    flex: 1;
+    min-width: 200px;
+    text-align: right;
+}
+
+.footer a {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #f2c8c9;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #4b0062;
+}
+
+.footer p {
+    margin: 0 0 10px;
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -142,6 +172,17 @@ body {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 700px) {
+    .social-media-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    .links a {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
 .social-media-grid {
     display: flex;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -181,33 +222,32 @@ body {
   <a href="#">Wrath of the Never Queen</a>
   <a href="#">House of the Iron Reaper</a>
   <a href="#">Flash Fiction</a>
+  <a href="#">Author Events</a>
   <a href="#">Newsletter</a>
   <a href="#">Social Media</a>
-  <a href="#">Giveaways</a>
   <a href="#">Contact</a>
 </div>
 
 <div class="row">
   <div class="side">
     <img src="author_photo.jpg" alt="author-photo" style="width:100%; height:auto;">
-    <p>I drink coffee and I write things.
-        <br>
-        I specialise in romance, fantasy, and horror (not always at the same time).
-        Here, you can find micro stories, flash fiction, book reviews and writer guides.</p>
-    <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
+    <p>Hi! I'm Storm Lomax. I drink coffee and I write things.
+    <p> 
+        I specialise in romance, fantasy, and horror (not always at the same time but it's weird how often
+        they overlap).
+        Here, you can find info about my books, my previously published flash fiction,
+        and any upcoming events.
+    <p>
+        Thanks for visiting!
+    </p>
     <a href="https://stormlomax.substack.com/subscribe"><img src="sign_up.png" alt="newsletter" style="width:100%; height:auto;"></a><br>
     <div class="fakeimg" style="height:60px;">Image</div><br>
     <div class="fakeimg" style="height:60px;">Image</div><br>
     <div class="social-media-grid">
         <a href="https://www.instagram.com/stormlomax.author/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <br>
         <a href="https://www.tiktok.com/@stormlomax" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-        <br>
         <a href="https://www.facebook.com/storm.lomax.author" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <br>
         <a href="https://stormlomax.substack.com/" target="_blank"><i class="fa-solid fa-envelope-open-text"></i></a>
-        <br>
         <a href="https://www.goodreads.com/author/show/17287322.Storm_Lomax" target="_blank"><i class="fa-brands fa-goodreads"></i></a>
     </div>
   </div>
@@ -267,7 +307,21 @@ body {
 </div>
 
 <div class="footer">
-  <h2>Footer</h2>
+    <div class="footer-left">
+        <p>Copyright © Storm Lomax 2025</p>
+        <p>Website designed by Storm Lomax</p>
+        <a href="#">Author Events</a>
+        <a href="#">Newsletter</a>
+        <a href="#">Social Media</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="footer-right">
+        <a href="#">Home</a>
+        <a href="#">About Me</a>
+        <a href="#">Wrath of the Never Queen</a>
+        <a href="#">House of the Iron Reaper</a>
+        <a href="#">Flash Fiction</a>
+    </div>
 </div>
 
 </body>
